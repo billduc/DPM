@@ -21,25 +21,25 @@ if ~exist('no_compile', 'var')
   fprintf('done.\n\n');
 end
 
-load('VOC2007/car_final');
-model.vis = @() visualizemodel(model, ...
-                  1:2:length(model.rules{model.start}));
-test('000034.jpg', model, 1);
+% load('VOC2007/car_final');
+% model.vis = @() visualizemodel(model, ...
+%                   1:2:length(model.rules{model.start}));
+% test('000034.jpg', model, 1);
 
 load('INRIA/inriaperson_final');
 model.vis = @() visualizemodel(model, ...
                   1:2:length(model.rules{model.start}));
 test('000061.jpg', model, 2);
 
-load('VOC2007/person_grammar_final');
-model.class = 'person grammar';
-model.vis = @() visualize_person_grammar_model(model, 6);
-test('000061.jpg', model, 2);
-
-load('VOC2007/bicycle_final');
-model.vis = @() visualizemodel(model, ...
-                  1:2:length(model.rules{model.start}));
-test('000084.jpg', model, 1);
+% load('VOC2007/person_grammar_final');
+% model.class = 'person grammar';
+% model.vis = @() visualize_person_grammar_model(model, 6);
+% test('000061.jpg', model, 2);
+% 
+% load('VOC2007/bicycle_final');
+% model.vis = @() visualizemodel(model, ...
+%                   1:2:length(model.rules{model.start}));
+% test('000084.jpg', model, 1);
 
 function test(imname, model, num_dets)
 cls = model.class;
