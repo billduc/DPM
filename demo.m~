@@ -74,7 +74,6 @@ clf;
 if model.type == model_types.Grammar
   bs = [ds(:,1:4) bs];
 end
-
 showboxes(im, reduceboxes(model, bs));
 % da tao ra cac box cho moi bo phan
 title('detections');
@@ -91,7 +90,7 @@ if model.type == model_types.MixStar
   showboxes(im, bbox(top,:));
   title('predicted bounding boxes');
   disp('bounding boxes');
-%   disp('press any key to continue'); pause;
+  disp('press any key to continue'); pause;
 end
 
 fprintf('\n');

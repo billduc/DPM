@@ -1,6 +1,7 @@
 function pick = nms(boxes, overlap)
 % Non-maximum suppression.
 %   pick = nms(boxes, overlap) 
+%
 % 
 %   Greedily select high-scoring detections and skip detections that are 
 %   significantly covered by a previously selected detection.

@@ -27,7 +27,7 @@ end
 if nargin < 3
   layers = 1;
 end
-
+%nargin la so tham so khi truyen vao ham visualizemodel
 k = 1;
 for i = components
   for layer = layers
@@ -80,6 +80,8 @@ axis equal;
 axis off;
 
 % draw parts and deformation model
+numparts = 1; 
+%chi lay part dau tien
 if numparts > 0
   def_im = zeros(size(im));
   def_scale = 500;

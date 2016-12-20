@@ -21,6 +21,6 @@ function [ds, bs, trees] = imgdetect(im, model, thresh)
 % your project.
 % -------------------------------------------------------
 
-im = color(im);
-pyra = featpyramid(im, model);
+im = color(im); %load hinh truy van
+pyra = featpyramid(im, model); 
 [ds, bs, trees] = gdetect(pyra, model, thresh);
