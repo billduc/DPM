@@ -32,13 +32,13 @@ if nargin > 2
   im = imresize(im, scale, 'method', 'cubic');
   %f = fspecial('gaussian', [3 3], 0.5);
   %im = imfilter(im, f);
-  boxes = (boxes-1)*scale+1;
+  boxes = (boxes-1)*scale+1;    
 else
   print = false;
   cwidth = 2;
 end
 
-image(im); 
+image(im); %load hinh 
 if print
   truesize(gcf);
 end

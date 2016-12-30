@@ -13,7 +13,7 @@ function demo(no_compile)
 % your project.
 % -------------------------------------------------------
 
-% startup;
+startup;
 
 if ~exist('no_compile', 'var')
   fprintf('compiling the code...');
@@ -29,6 +29,8 @@ end
 load('INRIA/inriaperson_final');
 model.vis = @() visualizemodel(model, ...
                   1:2:length(model.rules{model.start}));
+% length(model.rules{model.start}) = 2;
+
 test('000012.jpg', model, 6);
 
 % load('VOC2007/person_grammar_final');
@@ -43,6 +45,7 @@ test('000012.jpg', model, 6);
 
 function test(imname, model, num_dets)
 cls = model.class;
+
 fprintf('///// Running demo for %s /////\n\n', cls);
 
 % load and display image
@@ -79,7 +82,7 @@ showboxes(im, reduceboxes(model, bs));
 % da tao ra cac box cho moi bo phan
 title('detections');
 disp('detections');
-disp('press any key to continue'); pause;
+% disp('press any key to continue'); pause;
 disp('continuing...');
 
 if model.type == model_types.MixStar
